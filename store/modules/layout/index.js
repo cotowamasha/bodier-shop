@@ -1,6 +1,6 @@
 import * as TYPES from './types'
 
-const namespaced = true;
+const namespaced = true
 
 const state = () => ({
   signIn: {
@@ -12,7 +12,7 @@ const state = () => ({
 const actions = {}
 
 const mutations = {
-  [TYPES.CHANGE_STATE](state, payload) {
+  [TYPES.CHANGE_STATE] (state, payload) {
     state[payload.type] = payload.data
   }
 }
@@ -24,5 +24,5 @@ export default {
   actions,
   state,
   mutations,
-  getters,
-};
+  getters
+}

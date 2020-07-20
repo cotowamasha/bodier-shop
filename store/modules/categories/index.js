@@ -1,14 +1,14 @@
 import * as TYPES from './types'
 import functions from '~/utils/functions'
 
-const namespaced = true;
+const namespaced = true
 
 const state = () => ({
   categories: []
 })
 
 const actions = {
-  async getCategories({ commit }, data) {
+  async getCategories ({ commit }, data) {
     try {
       const response = await this.$api.get('/categories')
       commit('SET_CATEGORIES', response.data)
@@ -21,7 +21,7 @@ const actions = {
 }
 
 const mutations = {
-  [TYPES.SET_CATEGORIES](state, payload) {
+  [TYPES.SET_CATEGORIES] (state, payload) {
     state.categories = payload.categories
   }
 }
@@ -33,5 +33,5 @@ export default {
   actions,
   state,
   mutations,
-  getters,
+  getters
 }

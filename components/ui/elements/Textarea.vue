@@ -3,15 +3,14 @@
     class="txtarea"
     :class="{ 'txtarea--error' : error.status }"
   >
-    <slot
-      name="icon" />
+    <slot name="icon" />
     <textarea
       :id="id"
       :class="classEl"
       :type="type"
       :placeholder="holder"
       v-model.trim="name"
-      @input="$emit('changeInput', $event.target.value)"
+      @input="$emit('change-input', $event.target.value)"
       :rows="rows"
     />
     <span
@@ -37,13 +36,13 @@ export default {
     },
     rows: Number
   },
-  data() {
+  data () {
     return {
       name: this.value ? this.value : ''
     }
   },
   watch: {
-    value(data) {
+    value (data) {
       this.name = data
     }
   }

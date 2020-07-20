@@ -1,6 +1,6 @@
 import * as TYPES from './types'
 
-const namespaced = true;
+const namespaced = true
 
 const state = () => ({
   auth: false,
@@ -9,18 +9,18 @@ const state = () => ({
 
 const actions = {
   // Регистрация
-  async signUp({ commit }, data) {
+  async signUp ({ commit }, data) {
     try {
-      const resposne = await this.$api.post('/public/users/registration/user-details', data)
+      const res = await this.$api.post('/public/users/registration/user-details', data)
 
-      return response.data
+      return res.data
     } catch (e) {
       return this.$funcs.returnError(e)
     }
   },
 
   // Авторизация
-  async signIn({ commit, dispatch }, data) {
+  async signIn ({ commit, dispatch }, data) {
     try {
       const response = await this.$api.post('/public/auth/sign-in', data)
       if (response.data && response.data.code === '000') {
@@ -44,12 +44,12 @@ const actions = {
 }
 
 const mutations = {
-  [TYPES.SET_AUTH](state, payload) {
+  [TYPES.SET_AUTH] (state, payload) {
     state.auth = true
     state.token = payload.jwt
   },
 
-  [TYPES.LOG_OUT](state, payload) {
+  [TYPES.LOG_OUT] (state, payload) {
     state.auth = false
     state.token = null
 
@@ -65,5 +65,5 @@ export default {
   actions,
   state,
   mutations,
-  getters,
-};
+  getters
+}

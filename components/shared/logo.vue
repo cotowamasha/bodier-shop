@@ -1,26 +1,26 @@
 <template>
-  <div
-    class="logo">
+  <div class="logo">
     <nuxt-link
       to="/"
-      class="logo__link">
+      class="logo__link"
+    >
       <span class="b1">
-        b
+        B
       </span>
       <span class="b2">
-        o
+        O
       </span>
       <span class="b3">
-        d
+        D
       </span>
       <span class="b4">
-        i
+        I
       </span>
       <span class="b5">
-        e
+        E
       </span>
       <span class="b6">
-        r
+        R
       </span>
     </nuxt-link>
   </div>
@@ -28,5 +28,6 @@
 
 <script>
 export default {
+  name: 'Logo'
 }
 </script>

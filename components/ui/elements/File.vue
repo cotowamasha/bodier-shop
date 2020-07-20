@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="fl_upload">
-    <label
-      :for="id">
+  <div class="fl_upload">
+    <label :for="id">
 
       <span>
 
@@ -16,12 +14,14 @@
         type="file"
         :accept="accept"
         @change="change"
-        :multiple="multiple">
+        :multiple="multiple"
+      >
 
       <img
         v-show="preview"
         :src="preview"
-        alt="">
+        alt=""
+      >
 
     </label>
 
@@ -44,13 +44,13 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       preview: null
     }
   },
   methods: {
-    change(e) {
+    change (e) {
       const file = e.target.files[0]
 
       const img = new Image()
@@ -61,7 +61,7 @@ export default {
       img.src = URL.createObjectURL(file)
       URL.revokeObjectURL(file)
 
-      this.$emit('changeFile', file)
+      this.$emit('change-file', file)
     }
   }
 }

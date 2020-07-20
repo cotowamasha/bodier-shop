@@ -1,5 +1,8 @@
 <template>
-  <div class="spinner" :style="styles">
+  <div
+    class="spinner"
+    :style="styles"
+  >
     <svg
       v-for="item in 4"
       :key="item"

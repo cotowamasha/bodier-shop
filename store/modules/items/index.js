@@ -1,4 +1,3 @@
-import * as TYPES from './types'
 import functions from '~/utils/functions'
 
 const namespaced = true
@@ -8,7 +7,7 @@ const state = () => ({
 
 const actions = {
   // Добавить товар
-  async addItem({ commit }, data) {
+  async addItem ({ commit }, data) {
     try {
       const response = await this.$api.post('/item', data)
 
@@ -19,7 +18,7 @@ const actions = {
   },
 
   // Добавить картинку к товару
-  async addItemImage({ commit }, data) {
+  async addItemImage ({ commit }, data) {
     try {
       const response = await this.$api.post('/item/image', data.form, {
         params: {
@@ -38,7 +37,7 @@ const actions = {
   },
 
   // Получить все товары
-  async getItems({ commit }, data) {
+  async getItems ({ commit }, data) {
     try {
       const response = await this.$api.get('/items')
 
@@ -59,5 +58,5 @@ export default {
   actions,
   state,
   mutations,
-  getters,
+  getters
 }

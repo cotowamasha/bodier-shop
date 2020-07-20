@@ -1,0 +1,24 @@
+.menu
+  &__link
+    display: block
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    transition: color 0.3s
+
+
+  &-header
+    .menu
+      &__link
+        color: $link-color
+        &:hover
+          color: $softgrey
+
+  &-footer
+    .menu
+      &__link
+        color: $softgrey
+        &:hover
+          color: $white
+          text-decoration: underline
+

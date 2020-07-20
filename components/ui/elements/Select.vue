@@ -18,7 +18,7 @@
               class="slct__item"
               v-for="(item, i) in array"
               :key="i"
-              @click="$emit('changeSelect', item)"
+              @click="$emit('change-select', item)"
             >
               {{ item }}
             </div>
@@ -86,8 +86,8 @@ export default {
       const el = e.target.classList.contains('slct') ? e.target : this.$funcs.findParent(e.target, 'slct')
       const box = el.children[0].children
 
-      let child =''
-      Array.from(box).forEach(item => {
+      let child = ''
+      Array.from(box).forEach((item) => {
         if (item.classList.contains('slct__wrap')) {
           child = item.children[0]
         }

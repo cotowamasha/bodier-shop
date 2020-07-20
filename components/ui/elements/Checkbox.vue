@@ -12,7 +12,7 @@
         v-model="name"
         type="checkbox"
         class="chckbox__input"
-        @change="$emit('changeCheck', $event.target.checked)"
+        @change="$emit('change-check', $event.target.checked)"
       >
 
       <span class="chckbox__box" />
@@ -24,7 +24,8 @@
 
     <span
       v-if="error && error.status"
-      class="chckbox__error">
+      class="chckbox__error"
+    >
       {{ error.text }}
     </span>
   </div>

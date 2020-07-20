@@ -3,8 +3,7 @@
     class="f-input inpt"
     :class="{ 'inpt--error' : error && error.status }"
   >
-    <slot
-      name="icon" />
+    <slot name="icon" />
     <input
       :id="id"
       :class="[classEl, 'inpt__input']"
@@ -12,8 +11,8 @@
       :placeholder="holder"
       :value="value"
       v-model.trim="name"
-      @input="$emit('changeInput', $event.target.value)"
-    />
+      @input="$emit('change-input', $event.target.value)"
+    >
     <slot
       name="eye"
     />
@@ -36,13 +35,13 @@ export default {
     value: String,
     error: Object
   },
-  data() {
+  data () {
     return {
       name: this.value ? this.value : ''
     }
   },
   watch: {
-    value(data) {
+    value (data) {
       this.name = data
     }
   },

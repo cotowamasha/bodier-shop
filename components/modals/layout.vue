@@ -7,7 +7,8 @@
     >
       <div
         v-if="bg"
-        class="modal-window__bg" />
+        class="modal-window__bg"
+      />
     </transition>
 
     <transition
@@ -17,13 +18,16 @@
     >
       <div
         v-if="box"
-        class="modal-window__wrap">
+        class="modal-window__wrap"
+      >
         <div
           @mousedown.self="$emit('close')"
-          class="modal-window__container">
+          class="modal-window__container"
+        >
           <div
             @mousedown.self="$emit('close')"
-            class="modal-window__content">
+            class="modal-window__content"
+          >
             <slot/>
           </div>
         </div>

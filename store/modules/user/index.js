@@ -1,7 +1,7 @@
 import * as TYPES from './types'
 import functions from '~/utils/functions'
 
-const namespaced = true;
+const namespaced = true
 
 const state = () => ({
   user: null
@@ -9,7 +9,7 @@ const state = () => ({
 
 const actions = {
   // Получение пользователя
-  async getUser({ commit }, data) {
+  async getUser ({ commit }, data) {
     try {
       const response = await this.$api.get('/users/current')
       if (response.data && response.data.user) {
@@ -24,7 +24,7 @@ const actions = {
   },
 
   // изменить email
-  async changeUserEmail({ commit }, data) {
+  async changeUserEmail ({ commit }, data) {
     try {
       const response = await this.$api.put(`/users/${data.userId}/email`, data.data)
       if (response && response.data && response.data.code === '000') {
@@ -38,7 +38,7 @@ const actions = {
   },
 
   // изменить телефон
-  async changeUserTelefon({ commit }, data) {
+  async changeUserTelefon ({ commit }, data) {
     try {
       const response = await this.$api.put(`/users/${data.userId}/phone`, data.data)
       if (response && response.data && response.data.code === '000') {
@@ -52,7 +52,7 @@ const actions = {
   },
 
   // изменить пароль
-  async changeUserPassword({ commit }, data) {
+  async changeUserPassword ({ commit }, data) {
     try {
       const response = await this.$api.put('/users/password', data)
 
@@ -63,7 +63,7 @@ const actions = {
   },
 
   // Удаление аккаунта
-  async deleteAccount({ commit }, data) {
+  async deleteAccount ({ commit }, data) {
     try {
       const response = await this.$api.delete(`/users`)
 
@@ -74,7 +74,7 @@ const actions = {
   },
 
   // Добавить qr код в wallet
-  async addWallet({ commit }, data) {
+  async addWallet ({ commit }, data) {
     try {
       const response = await this.$api.post('/car-owners/add-qr', data)
 
@@ -86,11 +86,11 @@ const actions = {
 }
 
 const mutations = {
-  [TYPES.SET_USER](state, payload) {
+  [TYPES.SET_USER] (state, payload) {
     state.user = payload
   },
 
-  [TYPES.CHANGE_USER](state, payload) {
+  [TYPES.CHANGE_USER] (state, payload) {
     state.user[payload.type] = payload.value
   }
 }
@@ -102,5 +102,5 @@ export default {
   actions,
   state,
   mutations,
-  getters,
-};
+  getters
+}
