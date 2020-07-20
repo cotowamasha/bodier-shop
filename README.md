@@ -1,6 +1,4 @@
-# bonusking
-
-> Bonusking project
+# bodier
 
 ## Build Setup
 
@@ -8,13 +6,25 @@
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:8091
+# development
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
+# проект запускаетсы на 3001 порту
+```
 
-# generate static project
-$ npm run generate
+``` bash
+## Исходники:
+# Картинки - /static/img
+# Svg - /static/svg
+# Шрифты - /fonts
+
+## Разработка:
+# /components/layout - глобальные компоненты которые относятся к основным шаблонам
+# /components/page-parts - компоненты страниц
+# /components/shared - глобальные компоненты (используются на нескольких страницах)
+# /components/ui - глобальные компоненты (кнопки, инпуты, селекты ...)
+
+# /pages - основные страницы проекта
+# /plugins - плагины проекта (глобальные компоненты, функции, axios и др. подключаемые библиотеки)
+# /utils/functions - глобальные функции (this.$funcs)
 ```
