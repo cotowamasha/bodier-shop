@@ -1,0 +1,35 @@
+.sidebar-a
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 225px
+  z-index: 99
+  background-color: #212529
+  color: rgba(255, 255, 255, 0.5)
+  display: flex
+  flex-direction: column
+  padding-top: 56px
+
+  &__nav
+    display: flex
+    flex-direction: column
+
+  &__header
+    color: rgba(255, 255, 255, 0.25)
+    padding: 1.75rem 2rem 0.75rem
+    font-size: 11px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: .1em
+
+  &__link
+    display: flex
+    align-items: center
+    padding: 1rem 2rem
+    position: relative
+    font-size: 16px
+    color: rgba(255, 255, 255, 0.5)
+    transition: all .3s
+    &:hover, &.nuxt-link-exact-active
+      color: #fff
