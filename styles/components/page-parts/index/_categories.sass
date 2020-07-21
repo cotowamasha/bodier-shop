@@ -1,0 +1,41 @@
+.categories
+  margin-bottom: 77px
+  .section-title
+    margin-bottom: 46px
+
+  &__links
+    display: flex
+    justify-content: space-between
+    a
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      transition: box-shadow, transform 0.3s
+      &:hover
+        transform: scale(1.05)
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15)
+      p
+        background: $white
+        font-weight: bold
+        font-size: 14px
+        line-height: 100%
+        letter-spacing: 0.02em
+        color: $black
+        width: 280px
+        text-align: center
+        padding-top: 23px
+
+  &-1, &-2
+    display: block
+    width: 360px
+    height: 275px
+  &-1
+    margin-bottom: 30px
+    background: url("/img/categories/dress.png")no-repeat
+  &-2
+    background: url("/img/categories/uniform.png")no-repeat
+  &-3
+    width: 747px
+    height: 580px
+    background: url("/img/categories/classic.png")no-repeat
+

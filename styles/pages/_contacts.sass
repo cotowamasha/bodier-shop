@@ -1,0 +1,47 @@
+.contacts
+  background: url("/img/contacts-bg.png")no-repeat bottom left
+
+  &__content
+    display: flex
+    justify-content: flex-end
+    &-1
+      max-width: 555px
+      width: 100%
+
+  &__media
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-bottom: 130px
+    img
+      width: 100%
+    & a:first-child
+      width: 26px
+    & a:nth-child(2)
+      width: 20px
+    & a:nth-child(3)
+      width: 20px
+    & a:last-child
+      width: 16px
+
+  &__form
+    margin-bottom: 70px
+    &-line
+      display: flex
+      margin-bottom: 77px
+      & .inpt:first-child
+        margin-right: 30px
+    &-submit
+      max-width: 160px
+      display: flex
+      justify-content: flex-end
+      margin-left: auto
+  &__message
+    margin-bottom: 70px
+    p
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      color: $softgrey
+
+

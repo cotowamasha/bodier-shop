@@ -4,7 +4,10 @@
     :class="[{ 'slct--error' : error && error.status }, { 'active' : isOpen }]"
     @click="toggleDrop"
   >
-    <div class="slct__select">
+    <div
+      ref="selectInput"
+      class="slct__select"
+    >
       <span
         class="slct__holder"
       >
@@ -70,16 +73,6 @@ export default {
       isOpen: false
     }
   },
-  // computed: {
-  //   listArray () {
-  //     const list = []
-  //     this.array.forEach(item => {
-  //       list.push(item)
-  //     })
-  //
-  //     return
-  //   }
-  // },
   methods: {
     toggleDrop (e) {
       this.isOpen = !this.isOpen
