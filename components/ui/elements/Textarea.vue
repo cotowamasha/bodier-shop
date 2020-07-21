@@ -6,12 +6,12 @@
     <slot name="icon" />
     <textarea
       :id="id"
+      v-model.trim="name"
       :class="classEl"
       :type="type"
       :placeholder="holder"
-      v-model.trim="name"
-      @input="$emit('change-input', $event.target.value)"
       :rows="rows"
+      @input="$emit('change-input', $event.target.value)"
     />
     <span
       v-if="error && error.text"
@@ -25,16 +25,34 @@
 <script>
 export default {
   props: {
-    id: String,
-    type: String,
-    classEl: String,
-    holder: String,
-    value: String,
+    id: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: ''
+    },
+    classEl: {
+      type: String,
+      default: ''
+    },
+    holder: {
+      type: String,
+      default: ''
+    },
+    value: {
+      type: String,
+      default: ''
+    },
     error: {
       type: Object,
       default: () => { return {} }
     },
-    rows: Number
+    rows: {
+      type: Number,
+      default: 1
+    }
   },
   data () {
     return {

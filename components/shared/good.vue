@@ -9,9 +9,10 @@
     <div class="good__info">
       <div class="good__price">
         {{ good.price }}p
-        <span v-if="good.old_price">
-          {{ good.old_price }}p
-        </span>
+        <old-price
+          v-if="good.old_price"
+          :price="good.old_price"
+        />
       </div>
       <div class="good__rating">
         <img src="/svg/rating.svg">
@@ -32,8 +33,13 @@
 </template>
 
 <script>
+import OldPrice from './old-price'
+
 export default {
   name: 'Good',
+  components: {
+    OldPrice
+  },
   props: {
     good: {
       type: Object,

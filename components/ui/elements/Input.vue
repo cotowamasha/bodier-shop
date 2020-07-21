@@ -6,11 +6,11 @@
     <slot name="icon" />
     <input
       :id="id"
+      v-model.trim="name"
       :class="[classEl, 'inpt__input']"
       :type="type"
       :placeholder="holder"
       :value="value"
-      v-model.trim="name"
       @input="$emit('change-input', $event.target.value)"
     >
     <slot
@@ -28,12 +28,30 @@
 <script>
 export default {
   props: {
-    id: String,
-    type: String,
-    classEl: String,
-    holder: String,
-    value: String,
-    error: Object
+    id: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: ''
+    },
+    classEl: {
+      type: String,
+      default: ''
+    },
+    holder: {
+      type: String,
+      default: ''
+    },
+    value: {
+      type: String,
+      default: ''
+    },
+    error: {
+      type: Object,
+      default: () => ({})
+    }
   },
   data () {
     return {

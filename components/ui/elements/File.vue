@@ -13,8 +13,8 @@
         class="fl_inp pick-file"
         type="file"
         :accept="accept"
-        @change="change"
         :multiple="multiple"
+        @change="change"
       >
 
       <img
@@ -24,7 +24,6 @@
       >
 
     </label>
-
   </div>
 </template>
 

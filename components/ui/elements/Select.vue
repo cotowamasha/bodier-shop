@@ -18,9 +18,9 @@
         <div class="slct__box">
           <div class="slct__list">
             <div
-              class="slct__item"
               v-for="(item, i) in array"
               :key="i"
+              class="slct__item"
               @click="$emit('change-select', item)"
             >
               {{ item }}
@@ -50,7 +50,10 @@
 <script>
 export default {
   props: {
-    id: String,
+    id: {
+      type: String,
+      default: ''
+    },
     error: {
       type: Object,
       default: () => { return {} }

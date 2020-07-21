@@ -1,17 +1,12 @@
 <template>
   <div>
     <Header />
-
     <div
       class="wrapper"
     >
-
       <nuxt />
-
     </div>
-
     <Footer />
-
   </div>
 </template>
 

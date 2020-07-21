@@ -7,9 +7,9 @@ import Textarea from '~/components/ui/elements/Textarea.vue'
 import File from '~/components/ui/elements/File.vue'
 import Checkbox from '~/components/ui/elements/Checkbox.vue'
 
-Vue.component('v-btn', Button)
-Vue.component('v-input', Input)
-Vue.component('v-select', Select)
-Vue.component('v-txt', Textarea)
-Vue.component('v-file', File)
-Vue.component('v-check', Checkbox)
+Vue.component('VBtn', Button)
+Vue.component('VInput', Input)
+Vue.component('VSelect', Select)
+Vue.component('VTxt', Textarea)
+Vue.component('VFile', File)
+Vue.component('VCheck', Checkbox)

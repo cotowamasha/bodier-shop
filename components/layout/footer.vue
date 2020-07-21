@@ -12,7 +12,7 @@
           <div class="line" />
           <Menu
             :menu="item.links"
-            className="footer"
+            class-name="footer"
           />
         </div>
         <div class="footer__line">

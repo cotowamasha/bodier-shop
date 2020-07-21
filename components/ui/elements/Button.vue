@@ -1,8 +1,8 @@
 <template>
   <button
     class="btn"
-    @click.prevent="$emit('click')"
     :disabled="disabled"
+    @click.prevent="$emit('click')"
   >
     <span v-if="loading">
       <spinner :size="24" />
