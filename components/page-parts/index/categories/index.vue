@@ -6,20 +6,20 @@
     <section class="categories__links">
       <div class="categories-left">
         <n-link
-          to="/catalog"
+          to="/catalog/dress"
           class="categories-1"
         >
           <p>Платья</p>
         </n-link>
         <n-link
-          to="/catalog"
+          to="/catalog/uniform"
           class="categories-2"
         >
           <p>Униформы</p>
         </n-link>
       </div>
       <n-link
-        to="/catalog"
+        to="/catalog/classic"
         class="categories-3"
       >
         <p>Класика</p>

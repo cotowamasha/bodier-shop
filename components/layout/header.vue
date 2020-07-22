@@ -68,7 +68,7 @@ export default {
           name: 'Главная'
         },
         {
-          to: '/catalog',
+          to: '/catalog/classic',
           name: 'Каталог'
         },
         {

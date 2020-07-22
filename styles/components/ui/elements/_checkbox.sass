@@ -9,21 +9,26 @@
   &__input
     display: none
     &:checked + .chckbox__box
-      background: #fff url('/svg/checked.svg')no-repeat 50%
+      background: $blue !important
 
   &__box
-    border: 2px solid #fff
+    border: 1px solid $grey-border
     border-radius: 50%
-    width: 38px
-    height: 38px
+    width: 14px
+    height: 14px
     display: block
     flex: 0 0 auto
-    background-repeat: no-repeat
-    background-position: 50%
+    background-repeat: no-repeat !important
+    background-position: center center !important
     transition: all .3s
 
   &__text
-    font-size: 24px
-    margin-left: 19px
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    margin-left: 13px
+    color: $softgrey
     a
       color: #fff
+    &-active
+      color: $black

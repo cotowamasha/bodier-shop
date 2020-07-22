@@ -25,6 +25,7 @@
         </div>
         <v-btn
           class="mini--btn"
+          @click="$emit('remove', index)"
         >
           <img src="/svg/remove.svg">
         </v-btn>
@@ -45,6 +46,10 @@ export default {
     item: {
       type: Object,
       default: () => ({})
+    },
+    index: {
+      type: Number,
+      default: 1
     }
   }
 }

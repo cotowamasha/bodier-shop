@@ -69,15 +69,15 @@ export default {
           name: 'Категории',
           links: [
             {
-              to: '/',
+              to: '/catalog/classic',
               name: 'Класика'
             },
             {
-              to: '/',
+              to: '/catalog/uniform',
               name: 'Униформы'
             },
             {
-              to: '/',
+              to: '/catalog/dress',
               name: 'Платья'
             }
           ]
@@ -86,7 +86,7 @@ export default {
           name: 'Основное',
           links: [
             {
-              to: '/catalog',
+              to: '/catalog/classic',
               name: 'Каталог'
             },
             {

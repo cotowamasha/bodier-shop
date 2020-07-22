@@ -15,9 +15,14 @@
         @change="$emit('change-check', $event.target.checked)"
       >
 
-      <span class="chckbox__box" />
+      <span
+        :style="{background: `url('/svg/${bg}')`}"
+        class="chckbox__box"
+      />
 
-      <span class="chckbox__text">
+      <span
+        :class="['chckbox__text', {'chckbox__text-active': name}]"
+      >
         <slot />
       </span>
     </label>
@@ -42,6 +47,10 @@ export default {
     id: {
       type: String,
       required: true
+    },
+    bg: {
+      type: String,
+      default: ''
     },
     error: {
       type: Object,

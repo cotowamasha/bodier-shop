@@ -12,7 +12,12 @@
       <cart-item
         v-for="(item, i) of cartItems"
         :key="i"
+        ref="cartItem"
         :item="item"
+        :index="i"
+        @remove="remove(i)"
+        @increase="increaseCount(i)"
+        @decrease="decreaseCount(i)"
       />
     </div>
     <div class="cart__total">
@@ -49,7 +54,27 @@ export default {
           name: 'MISS X',
           type: 'Комплект белья',
           color: 'Синий',
+          all_colors: [
+            {
+              label: 'Синий',
+              value: 'Синий'
+            },
+            {
+              label: 'Черный',
+              value: 'Черный'
+            }
+          ],
           size: '70D',
+          all_sizes: [
+            {
+              label: '70D',
+              value: '70D'
+            },
+            {
+              label: '80A',
+              value: '80A'
+            }
+          ],
           count: 1,
           price: '1130'
         },
@@ -58,7 +83,27 @@ export default {
           name: 'SeamlessFLEX',
           type: 'Бюстгальтер',
           color: 'Черный',
+          all_colors: [
+            {
+              label: 'Синий',
+              value: 'Синий'
+            },
+            {
+              label: 'Черный',
+              value: 'Черный'
+            }
+          ],
           size: '80A',
+          all_sizes: [
+            {
+              label: '70D',
+              value: '70D'
+            },
+            {
+              label: '80A',
+              value: '80A'
+            }
+          ],
           count: 1,
           price: '850'
         },
@@ -67,7 +112,27 @@ export default {
           name: 'Infinity Lingerie',
           type: 'Бюстгальтер',
           color: 'Синий',
+          all_colors: [
+            {
+              label: 'Синий',
+              value: 'Синий'
+            },
+            {
+              label: 'Черный',
+              value: 'Черный'
+            }
+          ],
           size: '70D',
+          all_sizes: [
+            {
+              label: '70D',
+              value: '70D'
+            },
+            {
+              label: '80A',
+              value: '80A'
+            }
+          ],
           count: 1,
           price: '1375'
         }
@@ -79,6 +144,17 @@ export default {
       return this.cartItems.reduce((totalPrice, el) => {
         return totalPrice + +el.price * el.count
       }, 0)
+    }
+  },
+  methods: {
+    remove (i) {
+      this.cartItems.splice(i, 1)
+    },
+    increaseCount (i) {
+      this.cartItems[i].count += 1
+    },
+    decreaseCount (i) {
+      this.cartItems[i].count -= 1
     }
   }
 }
