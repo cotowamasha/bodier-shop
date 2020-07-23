@@ -17,7 +17,7 @@
 
       <span
         :style="{background: `url('/svg/${bg}')`}"
-        class="chckbox__box"
+        :class="['chckbox__box', color !== '' ? `chckbox__box--${color}` : 'chckbox__box']"
       />
 
       <span
@@ -49,6 +49,10 @@ export default {
       required: true
     },
     bg: {
+      type: String,
+      default: ''
+    },
+    color: {
       type: String,
       default: ''
     },

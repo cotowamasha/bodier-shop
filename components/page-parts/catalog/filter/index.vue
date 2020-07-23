@@ -30,6 +30,7 @@
         :key="i"
         :value="false"
         :bg="color.bg"
+        :color="color.color"
       >
         {{ color.name }}
       </v-check>
@@ -79,31 +80,38 @@ export default {
       colors: [
         {
           bg: 'red.svg',
-          name: 'Красный'
+          name: 'Красный',
+          color: 'red'
         },
         {
           bg: 'black.svg',
-          name: 'Черный'
+          name: 'Черный',
+          color: 'black'
         },
         {
           bg: 'white.svg',
-          name: 'Белый'
+          name: 'Белый',
+          color: 'white'
         },
         {
           bg: 'violet.svg',
-          name: 'Сиреневый'
+          name: 'Сиреневый',
+          color: 'violet'
         },
         {
           bg: 'pink.svg',
-          name: 'Розовый'
+          name: 'Розовый',
+          color: 'pink'
         },
         {
           bg: 'blue.svg',
-          name: 'Синий'
+          name: 'Синий',
+          color: 'blue'
         },
         {
           bg: 'beige.svg',
-          name: 'Бежевый'
+          name: 'Бежевый',
+          color: 'beige'
         }
       ],
       sizes: ['L', '70 A', '70 B', '70 C', '70 E', '70 F', '70 G']

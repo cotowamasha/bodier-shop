@@ -9,7 +9,22 @@
   &__input
     display: none
     &:checked + .chckbox__box
+      //background: $blue !important
+    &:checked + .chckbox__box--black
+      background: #000000 !important
+    &:checked + .chckbox__box--red
+      background: #CE2A2A !important
+    &:checked + .chckbox__box--white
+      background: #EFEFEF !important
+    &:checked + .chckbox__box--violet
+      background: #E2AAE2 !important
+    &:checked + .chckbox__box--pink
+      background: #F9BEC7 !important
+    &:checked + .chckbox__box--blue
       background: $blue !important
+    &:checked + .chckbox__box--beige
+      background: #F5DEB3 !important
+
 
   &__box
     border: 1px solid $grey-border

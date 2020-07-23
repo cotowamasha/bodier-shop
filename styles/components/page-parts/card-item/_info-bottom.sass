@@ -1,0 +1,134 @@
+.card
+
+  &-bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 68px
+
+    &--menu
+      max-width: 653px
+      width: 100%
+
+    &--rating
+      max-width: 360px
+      width: 100%
+      margin-top: 26px
+      .rating-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 20px
+        p
+          font-weight: 500
+          font-size: 22px
+          line-height: 27px
+        &--stars
+          display: flex
+          width: 100px
+          justify-content: space-between
+
+      .rating-bottom
+        .btn-black
+          margin-top: 47px
+        &--progress
+          font-weight: 500
+          font-size: 14px
+          line-height: 17px
+          color: $softgrey
+          display: grid
+          align-items: center
+          grid-template-columns: 90px 230px 1fr
+          margin-bottom: 10px
+          .progress
+            height: 6px
+            border: none
+            width: 100%
+            &::-webkit-progress-bar
+              background: $grey-border
+              border-radius: 10px
+            &::-webkit-progress-value
+              background: $orange
+              border-radius: 10px
+          p
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+            color: $black
+            text-align: right
+
+    &--menu, &--rating
+      .line
+        width: 100%
+        border-bottom: 1px solid $grey-border
+        margin-bottom: 40px
+
+  &-menu
+    width: 534px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+    .active
+      border-bottom: 1px solid $black
+      color: $black
+    p
+      cursor: pointer
+      display: block
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: $softgrey
+      padding-bottom: 16px
+      border-bottom: 1px solid $white
+      transition: border-bottom-color 0.3s
+      &:hover
+        border-bottom: 1px solid $black
+        color: $black
+
+  &-another
+    .section-title
+      margin-bottom: 50px
+    &--goods
+      display: flex
+      margin-bottom: 26px
+
+  &-about
+    font-weight: 500
+    font-size: 14px
+    line-height: 25px
+
+  &-specifications
+    li
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: 15px
+      & div:nth-child(2)
+        border-bottom: 1px dashed $grey-border
+        height: 14px
+        margin: 0 10px
+        width: 100%
+      .name
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        color: $softgrey
+        max-width: 177px
+        white-space: nowrap
+      .value
+        max-width: 188px
+        width: 100%
+        text-align: left
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        white-space: nowrap
+
+  &-feedbacks
+    .line
+      width: 100%
+      border-bottom: 1px solid $grey-border
+      margin-bottom: 37px
+    .btn
+      display: block
+      margin: 0 auto

@@ -22,6 +22,7 @@
       <v-btn
         v-else
         class="header__sign-in"
+        @click="openAuth()"
       >
         Войти
       </v-btn>

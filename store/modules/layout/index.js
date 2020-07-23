@@ -3,9 +3,9 @@ import * as TYPES from './types'
 const namespaced = true
 
 const state = () => ({
-  signIn: {
-    box: false,
-    bg: false
+  authBlock: {
+    bg: false,
+    box: false
   }
 })
 

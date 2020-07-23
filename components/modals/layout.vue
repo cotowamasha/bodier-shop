@@ -43,7 +43,19 @@ export default {
       type: Boolean,
       default: false
     },
-    box: Boolean
+    box: {
+      type: Boolean,
+      default: false
+    }
+  },
+  watch: {
+    bg (data) {
+      if (data) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = ''
+      }
+    }
   }
 }
 </script>
