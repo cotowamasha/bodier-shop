@@ -1,6 +1,5 @@
 export default {
   async nuxtServerInit ({ commit, dispatch }, { req }) {
-    await dispatch('categories/getCategories')
 
     // const token = this.$cookies.get('token')
     //

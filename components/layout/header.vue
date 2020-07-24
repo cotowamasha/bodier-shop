@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 import Logo from '~/components/shared/logo'
 import Menu from '~/components/shared/menu'
 import CartMini from '~/components/page-parts/cart/cart-mini'
@@ -132,6 +134,19 @@ export default {
       return this.cartItems.reduce((totalCount, el) => {
         return totalCount + el.count
       }, 0)
+    }
+  },
+  methods: {
+    ...mapMutations('layout', ['CHANGE_STATE']),
+
+    openAuth () {
+      this.CHANGE_STATE({
+        type: 'authBlock',
+        data: {
+          bg: true,
+          box: true
+        }
+      })
     }
   }
 }

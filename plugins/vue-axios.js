@@ -15,5 +15,19 @@ export default (ctx, inject) => {
     api.setHeader('Authorization', `Bearer ${token}`)
   }
 
+  api.interceptors.response.use((response) => {
+    return response
+  }, (err) => {
+    const response = { err }
+    if (response.err.response.data.code === '616') {
+      ctx.app.$cookies.remove('token')
+
+      ctx.app.store.commit('auth/LOG_OUT')
+      ctx.redirect('/')
+    }
+
+    return Promise.reject(err)
+  })
+
   inject('api', api)
 }
