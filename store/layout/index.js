@@ -6,6 +6,10 @@ const state = () => ({
   authBlock: {
     bg: false,
     box: false
+  },
+  menuBlock: {
+    bg: false,
+    box: false
   }
 })
 

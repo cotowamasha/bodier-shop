@@ -1,6 +1,17 @@
 <template>
-  <header class="header container">
+  <header
+    id="header"
+    class="header container"
+  >
     <div class="header-left">
+      <div
+        @click="openMenu()"
+        class="header__menu--small"
+      >
+        <div class="line" />
+        <div class="line" />
+        <div class="line" />
+      </div>
       <Logo />
       <div class="header__menu">
         <Menu
@@ -142,6 +153,15 @@ export default {
     openAuth () {
       this.CHANGE_STATE({
         type: 'authBlock',
+        data: {
+          bg: true,
+          box: true
+        }
+      })
+    },
+    openMenu () {
+      this.CHANGE_STATE({
+        type: 'menuBlock',
         data: {
           bg: true,
           box: true

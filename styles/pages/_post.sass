@@ -36,10 +36,13 @@
     align-items: center
     justify-content: space-between
     margin-bottom: 65px
+    a
+      margin-left: 15px
     img
       height: 13px
     .line
-      width: 646px
+      max-width: 646px
+      width: 100%
       border-bottom: 1px solid $grey-border
 
 .another
@@ -48,3 +51,9 @@
   &__posts
     .section-title
       margin-bottom: 64px
+
+@include for-size(mobile)
+  .post
+    &__text
+      font-size: 12px
+      line-height: 26px

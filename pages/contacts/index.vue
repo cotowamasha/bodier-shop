@@ -30,7 +30,6 @@
               />
             </div>
             <div class="contacts__message">
-              <p>Сообщение</p>
               <v-input
                 holder="Сообщение"
               />

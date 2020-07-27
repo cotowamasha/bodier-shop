@@ -30,6 +30,7 @@
         </div>
       </div>
       <v-btn
+        v-scroll-to="'#header'"
         class="btn-grey footer__to-start"
       >
         <img src="/svg/arr-top.svg">

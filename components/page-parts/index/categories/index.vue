@@ -1,7 +1,7 @@
 <template>
   <div class="categories container">
     <section-title>
-      Категории <span>Выберите свой вариант нижнего белья</span>
+      <p>Категории</p> <span>Выберите свой вариант нижнего белья</span>
     </section-title>
     <section class="categories__links">
       <div class="categories-left">

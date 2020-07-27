@@ -10,8 +10,9 @@
   &-name
     display: flex
     align-items: center
+    margin-right: 10px
     img
-      width: 45px
+      min-width: 45px
       height: 45px
       border-radius: 50%
       margin-right: 15px
@@ -20,7 +21,7 @@
       font-size: 14px
       line-height: 17px
   &-img
-    width: 45px
+    min-width: 45px
     height: 45px
     border-radius: 50%
     margin-right: 15px
@@ -52,3 +53,14 @@
     font-weight: 500
     font-size: 14px
     line-height: 25px
+
+@include for-size(mobile)
+  .feedback
+    &-date
+      flex-wrap: wrap
+      width: min-content
+      white-space: nowrap
+    &-stars
+      margin-left: 10px
+    &-text
+      margin-left: 20px

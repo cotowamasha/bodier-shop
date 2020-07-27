@@ -6,10 +6,15 @@
 
   &__item
     display: grid
-    grid-template-columns: 100px 415px repeat(3, 1fr) 112px 7px
+    //grid-template-columns: 100px 415px repeat(3, 1fr) 112px 7px
+    grid-template-columns: 100px 35% 1fr
     align-items: center
     padding: 10px 0
     border-bottom: 1px solid $grey-border
+    &-line
+      display: grid
+      grid-template-columns: repeat(3, 1fr) 20% 7px
+      align-items: center
 
     &--img
       max-width: 100px
@@ -70,6 +75,38 @@
       font-size: 22px
       line-height: 100%
       letter-spacing: 0.02em
-      margin-right: 36px
-    .btn-black
+    .btn
       max-width: 205px
+      margin-left: 36px
+
+@include for-size(tablet)
+  .cart
+    &__item
+      display: block
+      width: max-content
+      //grid-template-columns: 100px 35% repeat(3, 1fr)
+      //grid-template-rows: 130px 50px
+      &-line
+        max-width: 400px
+      &--name
+        padding-left: 0
+        margin-top: 10px
+
+@include for-size(mobile)
+  .cart
+    &__item
+      padding-bottom: 0
+      max-width: 480px
+      width: 100%
+      &-line
+        display: block
+      &--select, &--size
+        margin-bottom: 10px
+      &--count, &--price, &--remove
+        text-align: right
+        margin-bottom: 10px
+
+    &__total
+      flex-wrap: wrap
+      .btn
+        margin-top: 10px

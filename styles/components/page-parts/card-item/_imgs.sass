@@ -3,12 +3,14 @@
   &-top
     display: flex
     align-items: flex-start
-    margin-bottom: 68px
+    margin-bottom: 38px
+    flex-wrap: wrap
 
   &-imgs
     display: flex
     align-items: flex-start
     margin-right: 30px
+    margin-bottom: 30px
     &--small
       margin-right: 30px
       .img--small
@@ -20,3 +22,26 @@
     &--big
       img
         width: 457px
+        min-width: 457px
+
+@include for-size(tablet)
+  .card
+    &-imgs
+      display: block
+      &--small
+        display: flex
+        margin-bottom: 30px
+        .img--small
+          margin-bottom: 0
+          margin-right: 10px
+      &--big
+        img
+          min-width: auto
+          max-width: 100%
+          width: 100%
+
+@include for-size(mobile)
+  .card
+    &-imgs
+      .img--small
+        max-width: 50px

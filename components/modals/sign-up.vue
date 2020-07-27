@@ -1,9 +1,6 @@
 <template>
   <form class="sign-in__form">
     <div class="sign-in__form-line">
-      <p>
-        Имя
-      </p>
       <v-input
         holder="Имя"
       />
@@ -16,6 +13,7 @@
     <div class="sign-in__form-line">
       <v-input
         holder="Пароль"
+        type="password"
       />
     </div>
     <v-btn

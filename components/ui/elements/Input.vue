@@ -4,6 +4,9 @@
     :class="{ 'inpt--error' : error && error.status }"
   >
     <slot name="icon" />
+    <p class="inpt__holder">
+      {{ holder }}
+    </p>
     <input
       :id="id"
       v-model.trim="name"

@@ -34,7 +34,8 @@ module.exports = {
     'cookie-universal-nuxt',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/axios',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    ['vue-scrollto/nuxt', { duration: 300 }]
   ],
 
   svgSprite: {

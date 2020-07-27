@@ -44,4 +44,16 @@
       line-height: 15px
       color: $softgrey
 
-
+@include for-size(tablet)
+  .contacts
+    background-position: center bottom
+    &__media
+      margin-top: 30px
+      margin-bottom: 50px
+    &__form
+      &-line
+        display: block
+        margin-bottom: 50px
+        & .inpt:first-child
+          margin-right: 0
+          margin-bottom: 50px

@@ -1,18 +1,25 @@
 .header
   position: relative
-  padding: 20px 0
+  padding: 20px 15px
   display: flex
   align-items: center
   justify-content: space-between
   &-left
     display: flex
     align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-right: 10px
+    max-width: 620px
+    width: 100%
   &-right
     display: flex
     align-items: center
 
   &__menu
-    margin-left: 80px
+    margin-left: 10px
+    &--small
+      display: none
     .menu
       display: flex
       width: 413px
@@ -38,6 +45,8 @@
   &__cart
     position: relative
     cursor: pointer
+    img
+      min-width: 16px
     &--count
       padding: 4px 7px
       background: $black
@@ -49,4 +58,23 @@
       position: absolute
       left: 4px
       top: 12px
+
+@include for-size(tablet)
+  .header
+    &-left
+      max-width: none
+      width: auto
+    &__menu
+      display: none
+      &--small
+        display: block
+        margin-right: 15px
+        margin-top: -7px
+        .line
+          height: 7px
+          width: 20px
+          border-bottom: 1px solid $black
+
+    &__sign-in
+      margin-right: 15px
 

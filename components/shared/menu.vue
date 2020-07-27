@@ -1,6 +1,7 @@
 <template>
   <nav
     :class="['menu', `menu-${className}`]"
+    @mousedown.self="$emit('close')"
   >
     <n-link
       v-for="(item, i) of menu"

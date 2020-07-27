@@ -16,14 +16,20 @@
         </li>
       </ul>
     </div>
-    <div class="catalog-filter__title">
+    <div
+      class="catalog-filter__title"
+      @click="isShowColors = !isShowColors"
+    >
       Цвет
       <v-btn class="btn-grey btn-dashed btn-small">
         Сбросить
       </v-btn>
       <img src="/svg/arr-top.svg">
     </div>
-    <div class="catalog-filter__colors">
+    <div
+      v-show="isShowColors"
+      class="catalog-filter__colors"
+    >
       <v-check
         v-for="(color, i) of colors"
         :id="`${i}`"
@@ -35,14 +41,20 @@
         {{ color.name }}
       </v-check>
     </div>
-    <div class="catalog-filter__title">
-      Цвет
+    <div
+      class="catalog-filter__title"
+      @click="isShowSizes = !isShowSizes"
+    >
+      Размер
       <v-btn class="btn-grey btn-dashed btn-small">
         Сбросить
       </v-btn>
       <img src="/svg/arr-top.svg">
     </div>
-    <div class="catalog-filter__sizes">
+    <div
+      v-show="isShowSizes"
+      class="catalog-filter__sizes"
+    >
       <div
         v-for="(size, i) of sizes"
         :key="i"
@@ -56,11 +68,17 @@
         </p>
       </div>
     </div>
-    <div class="catalog-filter__title">
+    <div
+      class="catalog-filter__title"
+      @click="isShowPrice = !isShowPrice"
+    >
       Цена
       <img src="/svg/arr-top.svg">
     </div>
-    <div class="catalog-filter__price">
+    <div
+      v-show="isShowPrice"
+      class="catalog-filter__price"
+    >
       fgh
     </div>
   </div>
@@ -77,6 +95,9 @@ export default {
   },
   data () {
     return {
+      isShowColors: false,
+      isShowSizes: false,
+      isShowPrice: false,
       colors: [
         {
           bg: 'red.svg',
