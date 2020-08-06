@@ -1,10 +1,28 @@
 <template>
   <div class="card container">
-    <section-title>
-      <span class="path">
-        Главная &nbsp;&nbsp;/&nbsp;&nbsp; Каталог &nbsp;&nbsp;/&nbsp;&nbsp; Класика &nbsp;&nbsp;/&nbsp;&nbsp; Бюстгальтер 2829 BRIGHT WAVE
-      </span>
-    </section-title>
+    <div class="path">
+      <n-link
+        to="/"
+        class="path__link"
+      >
+        Главная&nbsp;&nbsp;
+      </n-link>
+      /&nbsp;&nbsp;
+      <n-link
+        to="/"
+        class="path__link"
+      >
+        Каталог&nbsp;&nbsp;
+      </n-link>
+      /&nbsp;&nbsp;
+      <n-link
+        to="/"
+        class="path__link"
+      >
+        Классика&nbsp;&nbsp;
+      </n-link>
+      /&nbsp;&nbsp;Бюстгальтер 2829 BRIGHT WAVE
+    </div>
     <div class="card-top">
       <CardImgs />
       <TopInfo

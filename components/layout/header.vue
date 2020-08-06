@@ -5,8 +5,8 @@
   >
     <div class="header-left">
       <div
-        @click="openMenu()"
         class="header__menu--small"
+        @click="open('menuBlock')"
       >
         <div class="line" />
         <div class="line" />
@@ -33,27 +33,26 @@
       <v-btn
         v-else
         class="header__sign-in"
-        @click="openAuth()"
+        @click="open('authBlock')"
       >
         Войти
       </v-btn>
-      <div class="header__cart">
-        <v-btn
-          @click="isShowMiniCart = !isShowMiniCart"
-        >
+      <div
+        class="header__cart"
+        @mouseenter="open('cartHover')"
+      >
+        <v-btn>
           <img src="/svg/cart.svg">
         </v-btn>
         <p
           v-if="cartItems.length"
           class="header__cart--count"
-          @click="isShowMiniCart = !isShowMiniCart"
         >
           {{ totalCount }}
         </p>
       </div>
     </div>
     <CartMini
-      v-show="isShowMiniCart && cartItems.length"
       :cart-items="cartItems"
     />
   </header>
@@ -75,7 +74,6 @@ export default {
   },
   data () {
     return {
-      isShowMiniCart: false,
       menu: [
         {
           to: '/',
@@ -150,18 +148,9 @@ export default {
   methods: {
     ...mapMutations('layout', ['CHANGE_STATE']),
 
-    openAuth () {
+    open (el) {
       this.CHANGE_STATE({
-        type: 'authBlock',
-        data: {
-          bg: true,
-          box: true
-        }
-      })
-    },
-    openMenu () {
-      this.CHANGE_STATE({
-        type: 'menuBlock',
+        type: el,
         data: {
           bg: true,
           box: true

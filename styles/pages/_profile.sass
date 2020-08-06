@@ -1,0 +1,43 @@
+.profile
+
+  &-form
+    padding-top: 30px
+    padding-bottom: 80px
+
+    &__inpts
+      display: flex
+      align-items: flex-start
+      margin-bottom: 78px
+    &__input
+      margin-bottom: 38px
+    &__line
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+    &__img
+      margin-right: 29px
+      min-width: 70px
+      height: 70px
+      border-radius: 50%
+      background: url("/img/profile-mini.png")no-repeat
+      background-size: cover
+    &__col
+      width: 262px
+      margin-right: 127px
+
+    &__btn
+      width: 162px
+      margin-left: auto
+      margin-right: 0
+
+@include for-size(tablet)
+  .profile
+    &-form
+      &__inpts
+        display: block
+        margin: 0 auto
+        width: fit-content
+      &__col
+        margin-right: 0
+      &__btn
+        margin: 0 auto

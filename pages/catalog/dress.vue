@@ -1,10 +1,14 @@
 <template>
   <div class="catalog container">
-    <section-title>
-      <span class="path">
-        Главная &nbsp;&nbsp;/&nbsp;&nbsp; Каталог &nbsp;&nbsp;/&nbsp;&nbsp; Платья
-      </span>
-    </section-title>
+    <div class="path">
+      <n-link
+        to="/"
+        class="path__link"
+      >
+        Главная
+      </n-link>
+      /&nbsp;&nbsp; Каталог&nbsp;&nbsp;/&nbsp;&nbsp; Платья
+    </div>
     <div class="catalog-content">
       <CatalogFilter :categories="categories" />
       <CatalogGoods :items="items" />
@@ -16,7 +20,6 @@
 </template>
 
 <script>
-import SectionTitle from '~/components/shared/section-title'
 import CatalogGoods from '~/components/page-parts/catalog/goods/index'
 import CatalogFilter from '~/components/page-parts/catalog/filter/index'
 import Pagination from '~/components/shared/pagination'
@@ -26,8 +29,7 @@ export default {
   components: {
     Pagination,
     CatalogFilter,
-    CatalogGoods,
-    SectionTitle
+    CatalogGoods
   },
   data () {
     return {

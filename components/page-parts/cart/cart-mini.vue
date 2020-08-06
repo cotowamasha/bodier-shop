@@ -1,5 +1,9 @@
 <template>
-  <div class="cart-mini">
+  <div
+    v-if="cartHover.bg"
+    class="cart-mini"
+    @mouseleave="close()"
+  >
     <div class="cart-mini__items">
       <cart-item-mini
         v-for="(item, i) of cart"
@@ -15,16 +19,17 @@
         {{ totalPrice }}p
       </div>
     </div>
-    <n-link
-      to="/cart"
-      class="btn btn--center btn-black btn-medium"
+    <v-btn
+      class="btn--center btn-black btn-medium"
+      @click="goTo('/cart'), close()"
     >
       Перейти в корзину
-    </n-link>
+    </v-btn>
   </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 import CartItemMini from './cart-item-mini'
 
 export default {
@@ -44,6 +49,8 @@ export default {
     }
   },
   computed: {
+    ...mapState('layout', ['cartHover']),
+
     totalPrice () {
       return this.cartItems.reduce((totalPrice, el) => {
         return totalPrice + +el.price * el.count
@@ -51,8 +58,23 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('layout', ['CHANGE_STATE']),
+
     remove (i) {
       this.cart.splice(i, 1)
+    },
+
+    close () {
+      this.CHANGE_STATE({
+        type: 'cartHover',
+        data: {
+          bg: false
+        }
+      })
+    },
+
+    goTo (link) {
+      this.$router.push(link)
     }
   }
 }

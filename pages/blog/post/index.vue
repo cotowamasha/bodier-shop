@@ -1,11 +1,22 @@
 <template>
   <div>
     <div class="post container">
-      <section-title>
-        <span class="path">
-          Главная &nbsp;&nbsp;/&nbsp;&nbsp; Блог &nbsp;&nbsp;/&nbsp;&nbsp; Wildberries расширил аудиторию покупателей
-        </span>
-      </section-title>
+      <div class="path">
+        <n-link
+          to="/"
+          class="path__link"
+        >
+          Главная&nbsp;&nbsp;
+        </n-link>
+        /&nbsp;&nbsp;
+        <n-link
+          to="/blog"
+          class="path__link"
+        >
+          Блог&nbsp;&nbsp;
+        </n-link>
+        /&nbsp;&nbsp;Wildberries расширил аудиторию покупателей
+      </div>
       <img
         src="/img/blog/blog1.png"
         class="post__img"

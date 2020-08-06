@@ -3,6 +3,10 @@ import * as TYPES from './types'
 const namespaced = true
 
 const state = () => ({
+  cartHover: {
+    bg: false,
+    box: false
+  },
   authBlock: {
     bg: false,
     box: false

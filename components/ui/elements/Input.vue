@@ -4,9 +4,21 @@
     :class="{ 'inpt--error' : error && error.status }"
   >
     <slot name="icon" />
-    <p class="inpt__holder">
-      {{ holder }}
-    </p>
+    <transition
+      appear
+      name="slide-top"
+    >
+      <p
+        v-if="showHolder"
+        class="inpt__holder"
+      >
+        {{ holder }}
+      </p>
+    </transition>
+    <p
+      v-if="!showHolder"
+      class="empty"
+    />
     <input
       :id="id"
       v-model.trim="name"
@@ -15,6 +27,8 @@
       :placeholder="holder"
       :value="value"
       @input="$emit('change-input', $event.target.value)"
+      @focus="showHolder = true"
+      @blur="showHolder = false"
     >
     <slot
       name="eye"
@@ -58,7 +72,8 @@ export default {
   },
   data () {
     return {
-      name: this.value ? this.value : ''
+      name: this.value ? this.value : '',
+      showHolder: false
     }
   },
   watch: {

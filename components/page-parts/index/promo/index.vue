@@ -8,9 +8,9 @@
         <swiper-slide
           v-for="(slide, i) of slides"
           :key="i"
-          class="promo__item"
+          :class="['promo__item', `promo__item--${i+1}`]"
         >
-          <div class="promo__text container">
+          <div :class="['promo__text', 'container', `promo__text--${slide.text_class}`]">
             {{ slide.text1 }}
             <span>{{ slide.text2 }}</span>
           </div>
@@ -32,19 +32,18 @@ export default {
       slides: [
         {
           text1: 'Эксклюзивная коллекция',
-          text2: 'Нижнего белья'
+          text2: 'Нижнего белья',
+          text_class: 'white'
         },
         {
           text1: 'Эксклюзивная коллекция',
-          text2: 'Нижнего белья'
+          text2: 'Нижнего белья',
+          text_class: 'black'
         },
         {
           text1: 'Эксклюзивная коллекция',
-          text2: 'Нижнего белья'
-        },
-        {
-          text1: 'Эксклюзивная коллекция',
-          text2: 'Нижнего белья'
+          text2: 'Нижнего белья',
+          text_class: 'black'
         }
       ],
       swiperOption: {

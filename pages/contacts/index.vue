@@ -1,11 +1,15 @@
 <template>
   <div class="contacts">
     <div class="container">
-      <section-title>
-        <span class="path">
-          Главная &nbsp;&nbsp;/&nbsp;&nbsp; Контакты
-        </span>
-      </section-title>
+      <div class="path">
+        <n-link
+          to="/"
+          class="path__link"
+        >
+          Главная&nbsp;&nbsp;
+        </n-link>
+        /&nbsp;&nbsp;Контакты
+      </div>
       <section-title class="contacts__title">
         Контакты
       </section-title>

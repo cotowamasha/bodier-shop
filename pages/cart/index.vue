@@ -1,10 +1,14 @@
 <template>
   <div class="cart container">
-    <section-title>
-      <span class="path">
-        Главная &nbsp;&nbsp;/&nbsp;&nbsp; Корзина
-      </span>
-    </section-title>
+    <div class="path">
+      <n-link
+        to="/"
+        class="path__link"
+      >
+        Главная&nbsp;&nbsp;
+      </n-link>
+      /&nbsp;&nbsp; Корзина
+    </div>
     <section-title>
       Корзина
     </section-title>

@@ -6,22 +6,32 @@
     height: 637px
 
   &__item
-    background: url("/img/promo.png")no-repeat center center
-    background-size: auto 100%
     height: 100%
     display: flex
     align-items: center
+    &--1
+      background: url("/img/promo.png")no-repeat center center
+      background-size: auto 100%
+    &--2
+      background: url("/img/promo1.png")no-repeat center center
+      background-size: auto 100%
+    &--3
+      background: url("/img/promo2.png")no-repeat right bottom
+      background-size: auto 100%
 
   &__text
     font-weight: bold
     font-size: 33px
     line-height: 110%
-    color: $white
     span
       display: block
       font-weight: 800
       font-size: 55px
       line-height: 110%
+    &--white
+      color: $white
+    &--black
+      color: $black
 
   &__pagination
     position: absolute
@@ -39,13 +49,17 @@
       font-size: 26px
       span
         font-size: 48px
+    &__item
+      &--3
+        background-position: right -200px bottom
 
 @include for-size(mobile)
   .promo
     &__swiper
       height: 450px
     &__item
-      background-position: -400px center
+      &--1, &--2
+        background-position: -400px center
     &__pagination
       bottom: 40px !important
     &__text

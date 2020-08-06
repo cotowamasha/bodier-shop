@@ -1,10 +1,14 @@
 <template>
   <div class="blog container">
-    <section-title>
-      <span class="path">
-        Главная &nbsp;&nbsp;/&nbsp;&nbsp; Блог
-      </span>
-    </section-title>
+    <div class="path">
+      <n-link
+        to="/"
+        class="path__link"
+      >
+        Главная&nbsp;&nbsp;
+      </n-link>
+      /&nbsp;&nbsp; Блог
+    </div>
     <section-title>
       Блог
     </section-title>
